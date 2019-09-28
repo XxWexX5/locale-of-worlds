@@ -1,12 +1,16 @@
 import React from 'react';
 
-import { StyledDefault } from './style/StyledDefault';
+import { StyledDefault, Container, Form } from './style/StyledDefault';
 
 const Default = () => (
     <StyledDefault>
-        <h2>
-            Hi, i'm default!
-        </h2>
+        <Container>
+            <h1 className="title">Busca de local</h1>
+            <Form>
+                <input type="text" />
+                <button>Enviar</button>
+            </Form>    
+        </Container>
     </StyledDefault>
 );
 
