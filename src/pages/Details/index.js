@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import axios from 'axios';
 import { apiGet } from '../../services/api';
+import { formatNumber } from '../../utilities/FormatNumber';
 
 import { Link } from 'react-router-dom';
 
@@ -58,7 +59,7 @@ export default class Details extends Component {
                         </li>
                         <li>
                             <strong>Population:</strong>
-                            <p>{this.state.geoname.population || '0'}</p>
+                            <p>{formatNumber(this.state.geoname.population || 0) || '0'}</p>
                         </li>
                         <li>
                             <strong>Lat:</strong>

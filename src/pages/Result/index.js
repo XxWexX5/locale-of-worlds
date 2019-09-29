@@ -3,8 +3,6 @@ import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 import { apiSearch } from '../../services/api';
 
-import { toaster } from 'evergreen-ui';
-
 import { Link } from 'react-router-dom';
 
 import { Container, Box } from '../../utilities/SharedStyles';
