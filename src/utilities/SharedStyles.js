@@ -24,6 +24,22 @@ export const Box = styled.main`
     margin: 20px;
     opacity: 0;
     animation: 1s animation-show forwards;
+    position: relative;
+
+    .container-back {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+
+        a {
+            color: #0269A4;
+            text-decoration: none;
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
 
     h1 {
         text-align: center;

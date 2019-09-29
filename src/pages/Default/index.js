@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import { Container, Box } from '../../utilities/SharedStyles';
 import { Form } from './style/StyledDefault';

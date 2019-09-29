@@ -11,6 +11,12 @@ import { List, SeeMore} from './styles';
 const Details = () => (
     <Container>
         <Box>
+            <div className="container-back">
+                <Link to="resultados">
+                    {`< Voltar`}
+                </Link>
+            </div>
+
             <h1 className="title">São Paulo</h1>
 
             <List>

@@ -10,6 +10,12 @@ import { FaChevronRight } from 'react-icons/fa';
 const Result = () => (
     <Container>
         <Box>
+            <div className="container-back">
+                <Link to="/">
+                    {`< Voltar`}
+                </Link>
+            </div>
+
             <h1 className="title">Resultados</h1>
 
             <List>
