@@ -1,5 +1,14 @@
 import styled from 'styled-components';
 
+export const StyledResult = styled.div`
+    .general {
+        align-items: baseline; 
+        background-repeat: repeat;
+        min-height: 100vh;
+        height: 100%;   
+    }
+`;
+
 export const List = styled.ul`
     list-style: none;
     margin: 0;
@@ -25,7 +34,7 @@ export const List = styled.ul`
         }
 
         &:hover {
-            opacity: .8;
+            opacity: .65;
 
             .icon-arrow {
                 animation: .5s animation-right forwards;

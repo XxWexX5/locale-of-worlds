@@ -16,6 +16,11 @@ export default class Details extends Component {
     };
 
     async componentDidMount() {
+        if(!this.props.history.location.state) {
+            localStorage.setItem('error', 'not-found');
+            return this.props.history.push('/', {error: 'not-found'});
+        }
+
         const geonameId = this.props.location.state.geonameId;
 
         const response = await axios.get(`${apiGet}&geonameId=${geonameId}`);
@@ -68,7 +73,7 @@ export default class Details extends Component {
                     <hr />
         
                     <SeeMore>
-                        <a href="https://www.wikipedia.org" target="_blank">
+                        <a href="https://www.wikipedia.org" target="_blank" rel="noopener noreferrer">
                             <FaLink />
                             <span className="link">Wikipédia</span>
                         </a>

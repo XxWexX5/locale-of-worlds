@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-import { Redirect } from 'react-router-dom';
-
 import axios from 'axios';
+
+import { toaster } from 'evergreen-ui';
 
 import { apiSearch } from '../../services/api';
 
@@ -15,10 +15,26 @@ export default class Default extends Component {
         loader: false,
     };
 
+    componentDidMount() {
+        if(localStorage.getItem('error')) {
+            localStorage.removeItem('error');
+            return toaster.danger(
+                'Ops, ocorreu um erro! Digite novamente o local desejado.'
+            )    
+        }
+    }
+
     handleSubmitSearch = async (e) => {
         e.preventDefault();
 
         const { valueLocale } = this.state;
+        localStorage.setItem('valueLocale', valueLocale);
+
+        if(!valueLocale) {
+            return toaster.danger(
+                'Por favor! Digite novamente o local desejado.'
+            )    
+        }
 
         this.setState({
             valueLocale: '',
@@ -28,7 +44,7 @@ export default class Default extends Component {
         const response = await axios.get(`${apiSearch}&name=${valueLocale}`);
         
         return response ? 
-            this.props.history.push('/resultados', { data: response.data }) :
+            this.props.history.push('/resultados', { data: response.data, valueLocale: valueLocale }) :
             this.setState({ loader: false });
     };
 
