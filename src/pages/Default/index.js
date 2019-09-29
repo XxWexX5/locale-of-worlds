@@ -1,17 +1,26 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-import { StyledDefault, Container, Form } from './style/StyledDefault';
+import { Redirect } from 'react-router-dom';
 
-const Default = () => (
-    <StyledDefault>
-        <Container>
-            <h1 className="title">Busca de local</h1>
-            <Form>
-                <input type="text" />
-                <button>Enviar</button>
-            </Form>    
-        </Container>
-    </StyledDefault>
-);
+import { Container, Box } from '../../utilities/SharedStyles';
+import { Form } from './style/StyledDefault';
 
-export default Default;
+export default class Default extends Component {
+    handleSubmitSearch = () => {
+
+    };
+
+    render() {
+        return(
+            <Container>
+                <Box>
+                    <h1 className="title">Busca de local</h1>
+                    <Form>
+                        <input type="text" placeholder="Cidade, Estado ou País" />
+                        <button onClick={this.handleSubmitSearch}>Enviar</button>
+                    </Form>    
+                </Box>
+            </Container>
+        );
+    }
+}
