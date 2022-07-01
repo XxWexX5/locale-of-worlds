@@ -1,6 +1,9 @@
 ## Projeto - openstartups
 ### By Wevison Ramalho
 
+Deploy:
+https://locale-of-worlds.vercel.app/
+
 ### Segue os passos abaixo para executar a aplicação:
 * Clone este repositório;
 * Navegue até a pasta;
