@@ -1,7 +1,7 @@
 ## Projeto - Locale of Worlds
 ### By Wevison Ramalho
 
-[![image-github.png](https://i.postimg.cc/X70khFtb/image-github.png)](https://postimg.cc/z30hHLJt)
+[![image-github.png](https://i.postimg.cc/KzRkZdRp/image-github.png)](https://postimg.cc/BLfQp752)
 
 Deploy:
 https://locale-of-worlds.vercel.app/
